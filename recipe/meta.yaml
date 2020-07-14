@@ -1,5 +1,5 @@
 {% set name = "aws-okta-keyman" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 00f2ff2776799388a2a4fb37910664eb2101ecb8b334d599da735a77726af112
+  sha256: 865ba7ef2c5718b5db63007798b96b87b2390a609dca9fe8bd6b99df5c003a75
 
 build:
   number: 0
