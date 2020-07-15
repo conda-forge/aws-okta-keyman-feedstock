@@ -14,7 +14,7 @@ build:
   number: 0
   noarch: python
   entry_points:
-    - aws_okta_keyman = aws_okta_keyman.main:entry_point
+    - aws_okta_keyman = aws_okta_keyman.__main__:entry_point
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
