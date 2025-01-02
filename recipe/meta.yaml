@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 58ba9cb40402ab8bcae2fd8bbcf9966cf9416436cfc84636cadca0e27d5f90a1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - aws_okta_keyman = aws_okta_keyman.__main__:entry_point
@@ -21,7 +21,7 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - beautifulsoup4 >=4.4.0
     - boto3 >=1.4.0
@@ -29,7 +29,7 @@ requirements:
     - configparser >=3.5.0
     - future >=0.16.0
     - keyring >=18.0.0
-    - python >=3.6
+    - python >={{ python_min }}
     - pyyaml >=5.0
     - requests >=2.10.0
 
@@ -42,6 +42,7 @@ test:
     - aws_okta_keyman --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/nathan-v/aws_okta_keyman
