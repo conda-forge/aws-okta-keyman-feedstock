@@ -22,6 +22,7 @@ requirements:
     - pip
     - pytest-runner
     - python {{ python_min }}
+    - setuptools
   run:
     - beautifulsoup4 >=4.4.0
     - boto3 >=1.4.0
